@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Coffee Menu</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f3f3;
+      margin: 0;
+      padding: 20px;
+    }
+    .menu-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .coffee-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      width: 200px;
+      text-align: center;
+      padding: 10px;
+    }
+    .coffee-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .coffee-name {
+      font-weight: bold;
+      margin: 10px 0 5px;
+    }
+    .coffee-price {
+      color: #555;
+      margin-bottom: 10px;
+    }
+    .order-btn {
+      background: #7B3F00;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .order-btn:hover {
+      background: #5a2e00;
+    }
+  </style>
+</head>
+<body>
+
+<h1 style="text-align:center;">Coffee Menu</h1>
+<div class="menu-container">
+  <div class="coffee-card">
+    <img src="https://media.istockphoto.com/id/1030882758/photo/espresso-coffee-and-machine.jpg?s=612x612&w=0&k=20&c=k6ODdihU-Q7zG3ftft-pVYIkBf_V5I8V98UQDG3ChzE=" alt="Coffee 1">
+    <div class="coffee-name">Espresso</div>
+    <div class="coffee-price">₹120</div>
+    <button class="order-btn" onclick="placeOrder('Espresso')">Place Order</button>
+  </div>
+  <div class="coffee-card">
+    <img src="https://media.istockphoto.com/id/505168330/photo/cup-of-cafe-latte-with-coffee-beans-and-cinnamon-sticks.jpg?s=612x612&w=0&k=20&c=h7v8kAfWOpRapv6hrDwmmB54DqrGQWxlhP_mTeqTQPA=" alt="Coffee 2">
+    <div class="coffee-name">Cappuccino</div>
+    <div class="coffee-price">₹140</div>
+    <button class="order-btn" onclick="placeOrder('Cappuccino')">Place Order</button>
+  </div>
+  <div class="coffee-card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyUOj4TeaWFq4wNrWpzNp6ecDJtYwxxuIc-A&s" alt="Coffee 3">
+    <div class="coffee-name">Latte</div>
+    <div class="coffee-price">₹130</div>
+    <button class="order-btn" onclick="placeOrder('Latte')">Place Order</button>
+  </div>
+  <div class="coffee-card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX5eifqqerA4s8m0TzELof0fC3H04SX4I_AQ&s" alt="Coffee 4">
+    <div class="coffee-name">Mocha</div>
+    <div class="coffee-price">₹150</div>
+    <button class="order-btn" onclick="placeOrder('Mocha')">Place Order</button>
+  </div>
+  <div class="coffee-card">
+    <img src="https://media.istockphoto.com/id/1256257189/photo/cafe-latte-macchiato-layered-coffee.jpg?s=612x612&w=0&k=20&c=qxt-VvvIZ65X8FAM11MUjldxesV3j-WgdJ91kZkx48Y=" alt="Coffee 5">
+    <div class="coffee-name">Macchiato</div>
+    <div class="coffee-price">₹145</div>
+    <button class="order-btn" onclick="placeOrder('Macchiato')">Place Order</button>
+  </div>
+  <div class="coffee-card">
+    <img src="https://media.istockphoto.com/id/183138035/photo/cup-of-latte-coffee-and-spoon-on-gray-counter.jpg?s=612x612&w=0&k=20&c=Iht-hG2bzxiZgpjao6RELKAbw4oG7ujS2wQNkiM2rqU=" alt="Coffee 6">
+    <div class="coffee-name">Flat White</div>
+    <div class="coffee-price">₹135</div>
+    <button class="order-btn" onclick="placeOrder('Flat White')">Place Order</button>
+  </div>
+  <div class="coffee-card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQU_ardzra_uEYJRs3rhptHgO0xGlZpwTg8g&s" alt="Coffee 7">
+    <div class="coffee-name">Americano</div>
+    <div class="coffee-price">₹110</div>
+    <button class="order-btn" onclick="placeOrder('Americano')">Place Order</button>
+  </div>
+  <div class="coffee-card">
+    <img src="https://www.allrecipes.com/thmb/Hqro0FNdnDEwDjrEoxhMfKdWfOY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/21667-easy-iced-coffee-ddmfs-4x3-0093-7becf3932bd64ed7b594d46c02d0889f.jpg" alt="Coffee 8">
+    <div class="coffee-name">Iced Coffee</div>
+    <div class="coffee-price">₹125</div>
+    <button class="order-btn" onclick="placeOrder('Iced Coffee')">Place Order</button>
+  </div>
+  <div class="coffee-card">
+    <img src="https://media.istockphoto.com/id/1038768868/photo/cold-brew-coffee.jpg?s=612x612&w=0&k=20&c=A_TD99bRHhjBZjOdYmPt91HoZvmcCPjm71gv1IPe514=" alt="Coffee 9">
+    <div class="coffee-name">Cold Brew</div>
+    <div class="coffee-price">₹155</div>
+    <button class="order-btn" onclick="placeOrder('Cold Brew')">Place Order</button>
+  </div>
+  <div class="coffee-card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4oodXNMZLt1-ZW3o2bK6YCl2urCBpPW3IbA&s" alt="Coffee 10">
+    <div class="coffee-name">Affogato</div>
+    <div class="coffee-price">₹160</div>
+    <button class="order-btn" onclick="placeOrder('Affogato')">Place Order</button>
+  </div>
+  <div class="coffee-card">
+    <img src="https://t3.ftcdn.net/jpg/01/48/10/66/360_F_148106686_7KmdBHuFhuArLyQCESWD3WTrsRzJQg0O.jpg" alt="Coffee 11">
+    <div class="coffee-name">Cortado</div>
+    <div class="coffee-price">₹130</div>
+    <button class="order-btn" onclick="placeOrder('Cortado')">Place Order</button>
+  </div>
+  <div class="coffee-card">
+    <img src="https://www.nestleprofessional.in/sites/default/files/2021-11/Ristretto.jpg" alt="Coffee 12">
+    <div class="coffee-name">Ristretto</div>
+    <div class="coffee-price">₹120</div>
+    <button class="order-btn" onclick="placeOrder('Ristretto')">Place Order</button>
+  </div>
+  <div class="coffee-card">
+    <img src="https://plus.unsplash.com/premium_photo-1732818135469-3bfc10ed83a2?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dHVya2lzaCUyMGNvZmZlZXxlbnwwfHwwfHx8MA%3D%3D" alt="Coffee 13">
+    <div class="coffee-name">Turkish Coffee</div>
+    <div class="coffee-price">₹165</div>
+    <button class="order-btn" onclick="placeOrder('Turkish Coffee')">Place Order</button>
+  </div>
+  <div class="coffee-card">
+    <img src="https://mocktail.net/wp-content/uploads/2021/09/nitro-cold-brew-at-home_ig.jpg" alt="Coffee 14">
+    <div class="coffee-name">Nitro Cold Brew</div>
+    <div class="coffee-price">₹170</div>
+    <button class="order-btn" onclick="placeOrder('Nitro Cold Brew')">Place Order</button>
+  </div>
+  <div class="coffee-card">
+    <img src="https://www.vegrecipesofindia.com/wp-content/uploads/2020/05/whipped-coffee-1.jpg" alt="Coffee 15">
+    <div class="coffee-name">Dalgona Coffee</div>
+    <div class="coffee-price">₹150</div>
+    <button class="order-btn" onclick="placeOrder('Dalgona Coffee')">Place Order</button>
+  </div>
+  <div class="coffee-card">
+    <img src="https://media.istockphoto.com/id/1164965324/photo/irish-coffee-in-drinking-glass.jpg?s=612x612&w=0&k=20&c=AVvzstJHGdd-W7Is7RyNNNChu1pevtKQ7x0ZoLZYZxA=" alt="Coffee 16">
+    <div class="coffee-name">Irish Coffee</div>
+    <div class="coffee-price">₹180</div>
+    <button class="order-btn" onclick="placeOrder('Irish Coffee')">Place Order</button>
+  </div>
+  <div class="coffee-card">
+    <img src="https://www.nestleprofessional.in/sites/default/files/2024-09/Vietnamese-Coffee-756x471.jpg" alt="Coffee 17">
+    <div class="coffee-name">Vietnamese Coffee</div>
+    <div class="coffee-price">₹160</div>
+    <button class="order-btn" onclick="placeOrder('Vietnamese Coffee')">Place Order</button>
+  </div>
+  <div class="coffee-card">
+    <img src="https://fandbrecipes.com/wp-content/uploads/2022/08/Spanish-Latte_Step-By-Step-Recipe.png" alt="Coffee 18">
+    <div class="coffee-name">Spanish Latte</div>
+    <div class="coffee-price">₹155</div>
+    <button class="order-btn" onclick="placeOrder('Spanish Latte')">Place Order</button>
+  </div>
+  <div class="coffee-card">
+    <img src="https://hungerthirstplay.com/wp-content/uploads/2020/12/Honey-Cinnamon-Oat-Milk-Latte-13.jpg" alt="Coffee 19">
+    <div class="coffee-name">Honey Cinnamon Latte</div>
+    <div class="coffee-price">₹165</div>
+    <button class="order-btn" onclick="placeOrder('Honey Cinnamon Latte')">Place Order</button>
+  </div>
+  <div class="coffee-card">
+    <img src="https://thumbs.dreamstime.com/b/delectable-caramel-macchiato-showcasing-layers-espresso-steamed-milk-delicious-drizzle-cozy-caf%C3%A9-rich-features-350944668.jpg" alt="Coffee 20">
+    <div class="coffee-name">Caramel Macchiato</div>
+    <div class="coffee-price">₹170</div>
+    <button class="order-btn" onclick="placeOrder('Caramel Macchiato')">Place Order</button>
+  </div>
+  <div class="coffee-card">
+    <img src="https://media.istockphoto.com/id/1152767411/photo/cup-of-coffee-latte-isolated-on-white-background-with-clipping-path.jpg?s=612x612&w=0&k=20&c=24HBAvkahjo8LKV-6DRUklQzPJUqxjmVlBFtV5BG4tU=" alt="Coffee 21">
+    <div class="coffee-name">Café au Lait</div>
+    <div class="coffee-price">₹140</div>
+    <button class="order-btn" onclick="placeOrder('Café au Lait')">Place Order</button>
+  </div>
+  <div class="coffee-card">
+    <img src="https://www.sessioncoffeedenver.com/wp-content/uploads/2024/04/what-is-a-red-eye-coffee.jpg" alt="Coffee 22">
+    <div class="coffee-name">Red Eye</div>
+    <div class="coffee-price">₹150</div>
+    <button class="order-btn" onclick="placeOrder('Red Eye')">Place Order</button>
+  </div>
+  <div class="coffee-card">
+    <img src="https://i.redd.it/43oppuzvd7v71.jpg" alt="Coffee 23">
+    <div class="coffee-name">Vienna Coffee</div>
+    <div class="coffee-price">₹165</div>
+    <button class="order-btn" onclick="placeOrder('Vienna Coffee')">Place Order</button>
+  </div>
+  <div class="coffee-card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCvRG8j_NCwERTJDfYQQk-KVQQhRxGt7Tlhw&s" alt="Coffee 24">
+    <div class="coffee-name">Coconut Latte</div>
+    <div class="coffee-price">₹170</div>
+    <button class="order-btn" onclick="placeOrder('Coconut Latte')">Place Order</button>
+  </div>
+</div> <!-- End of menu-container -->
+
+<script>
+  function placeOrder(coffeeName) {
+    // Display a confirmation message
+    alert('Your order for ' + coffeeName + ' has been placed!');
+  }
+</script>
+
+</body>
+</html>

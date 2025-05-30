@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Infinty cafe</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:sans-serif;
+text-decoration:none;
+list-style:none;
+}
+.main_container{
+min-height:100vh;
+background:url(https://media.istockphoto.com/id/1467199060/photo/cup-of-coffee-with-smoke-and-coffee-beans-on-old-wooden-background.jpg?s=612x612&w=0&k=20&c=OnS8_6FM5ussfSGmjpDD-GofERg2UbItdxShIAA90sQ=);
+background-position:center;
+background-size:cover;
+background-repeat:no-repeat;
+}
+nav{
+display:flex;
+align-items:center;
+justify-content:space-between;
+width:85%;
+margin:auto;
+padding:15px 0;
+}
+.logo{
+width:170px;
+}
+nav ul{
+display:flex;
+align-items:center;
+}
+nav ul li{
+margin:0 20px;
+}
+nav ul li a{
+color:white;
+font-size:17px;
+transition:-3s;
+cursor:pointer;
+}
+nav ul li a:hover{
+border-bottom:2px solid #fce2bc;
+color:orange;
+}
+nav button{
+padding:10px 30px;
+font-size:15px;
+background-color:#fce2bc;
+color:#321b0e;
+font-weight:600;
+margin-left:20px;
+}
+nav button:hover{
+scale:
+
+
+.9;
+cursor:pointer;
+}
+.content{
+position:absolute;
+top:30%;
+left:800px;
+}
+.content button{
+padding:12px 45px;
+border:3px solid white;
+background:transparent;
+color:white;
+font-weight:600;
+outline:none;
+margin-top:40px;
+transition:.3s;
+}
+.content button:hover{
+cursor:pointer;
+scale:1.1;
+}
+h1{
+font-size:50px;
+font-weight:bolder;
+color:white;
+}
+p{
+font-size:12px;
+font-family:cursive;
+color:white;
+margin-top:13px;
+}
+.social_media{
+margin-top:40px;
+}
+.social_media a{
+font-size:30px;
+color:#fce2bc;
+margin:0 10px;
+}
+.social_media a:hover{
+color:orange;
+
+}
+</style>
+</head>
+<body>
+  <p>Redirecting to registration page...</p>
+  <div class="main_container">
+
+    <nav>
+      <h1 class="logo" style="font-family: arial; font-weight: bold;">☕Infinity</h1>
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/about1.html">About</a></li>
+        <li><a href="/menu2.html">Menu</a></li>
+        <li><a href="/coffeemenu.html">Product</a></li>
+        <li><a href="/review.html">Reviews</a></li>
+        <li><a href="/contact2.html">Contact</a></li>
+        <button onclick="window.location.href='more.html'">More</button>
+      </ul>
+    </nav>
+
+    <div class="content">
+      <h1>Make Your Day Great With<br>Our Coffee</h1>
+      <p>
+        Start your day with a boost of energy and a smile! Our coffee is crafted to kickstart your morning
+        with rich flavor and comforting warmth. Whether you’re rushing to work or enjoying a slow morning,
+        a cup of our coffee is the perfect way to brighten your day and keep you going strong.
+      </p>
+
+      <!-- "Get Now" button -->
+      <button onclick="window.location.href='/ordernow.html'">Get Now</button>
+
+      <div class="social_media">
+        <a href="#" class="fab fa-facebook"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+        <a href="#" class="fab fa-pinterest"></a>
+      </div>
+     
+    </div>
+
+  </div>
+  <h1 style="color:white;text-align:center;margin-top:100px;">Welcome to Infinity ☕</h1>
+  <p style="color:white;text-align:center;">Redirecting to registration in 5 seconds...</p>
+  <form id="registerForm" onsubmit="goToLoginPage(); return false;">
+    <input type="submit" value="Register">
+  </form>
+  <script>
+    function goToLoginPage() {
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>
