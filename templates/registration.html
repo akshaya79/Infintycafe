@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>registration</title>
+<style>
+* {
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:sans-serif;
+border:none;
+}
+body{
+background:url(https://www.copyright.gov/registration/grnw/images/GRNW-Landing-Webpage-Image.jpg);
+background:cover;
+background-repeat:no-repeat;
+background-size:cover;
+min-height:100vh;
+}
+.main_container{
+position:absolute;
+top:20%;
+left:40%;
+min-width:400px;
+}
+div p{
+color:white;
+font-size:20px;
+margin:10px 0;
+}
+.main_container h1{
+font-size:30px;
+margin-bottom:25px;
+text-align:center;
+color:white;
+
+}
+.main_container div{
+margin:5px;
+}
+.main_container input{
+border-radius:5px;
+width:100%;
+padding:18px 15px;
+}
+button{
+padding:18px 15px;
+border-radius:5px;
+cursor:pointer;
+margin-top:15px;
+width:50%;
+font-size:15px;
+}
+button:hover{
+color:black;
+background-color:#FFFFF7;
+scale:0.9;
+
+}
+
+</style>
+</head>
+<body>
+<div class="main_container">
+<h1>REGISTRATION FORM</h1>
+<div>
+  <form method="POST" action="/">
+    <p>Full Name:</p>
+    <input type="text" name="full_name" placeholder="Enter Your Full Name" required>
+    <p>Username:</p>
+    <input type="text" name="username" placeholder="Enter Your Username" required>
+    <p>Email:</p>
+    <input type="email" name="email" placeholder="Enter Your Email" required>
+    <p>Password:</p>
+    <input type="password" name="password" placeholder="Enter Your Password" required>
+    <button type="submit">Register</button>
+  </form>
+  <p>Already registered? <a href="login.html">Login here</a></p>
+</div>
+</div>
+</body>
+</html>
